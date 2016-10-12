@@ -1,0 +1,37 @@
+<div ng-controller="homeCtrl">
+	<div class="row clearfix">
+		<div class="col-md-8 column">
+			<form role="form">
+			  <div class="form-group">
+			  	<div class="input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">请输入取信密码：</button>
+                    </span>
+                    <input ng-model="getReplyKey" type="text" class="form-control">
+                </div>
+			    <textarea ng-model="submitContent" rows="6" type="text" class="form-control" id="name" placeholder="在这里倾诉你的烦恼，解忧杂货店将为你解答……"></textarea>
+			  </div>
+			  <button ng-click="submit()" type="button" class="btn btn-default" >穿越</button>
+			  <button ng-click="clear()" type="button" class="btn btn-default">撕毁</button>
+			</form>
+	    </div>
+		<div class="col-md-4 column">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h3 class="panel-title">
+						天空之城
+					</h3>
+				</div>
+				<div class="panel-body">
+					故事……
+				</div>
+				<div class="panel-footer">
+					久石让
+				</div>
+			</div>
+			<div class="media">
+				 <a href="#" class="pull-left"><img style="width: 350px" src="images/disk.jpg" class="media-object" alt='' /></a>
+			</div>
+		</div>
+	</div>
+  </div>
