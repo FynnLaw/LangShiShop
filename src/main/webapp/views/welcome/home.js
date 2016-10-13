@@ -1,8 +1,20 @@
 app.controller('homeCtrl', function($scope) {
 	$scope.submit = function(){
-		console.log($scope.submitContent);
+		
+		$scope.clearError();
+		
 		var getReplyKey = $scope.getReplyKey;
 		var content = $scope.submitContent;
+		
+		if(getReplyKey == "" || getReplyKey == undefined){
+			$scope.showKeyError = true;
+			return;
+		}
+		
+		if(content == "" || content == undefined){
+			$scope.showContentError = true;
+			return;
+		}
 		
 		var data = {
 				getReplyKey : getReplyKey,
@@ -17,5 +29,10 @@ app.controller('homeCtrl', function($scope) {
 	
 	$scope.clear = function(){
 		$scope.submitContent = "";
+	}
+	
+	$scope.clearError = function(){
+		$scope.showKeyError = false;
+		$scope.showContentError = false;
 	}
 });

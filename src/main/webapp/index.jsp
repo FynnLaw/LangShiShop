@@ -5,6 +5,8 @@
       <!-- 为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放 -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link href="css/bootstrap.min.css" rel="stylesheet" />
+      <link href="css/normalize.css" rel="stylesheet" />
+      <link href="css/style.css" rel="stylesheet" />
 
       <script src="js/jquery-3.1.1.min.js"></script>
       <script src="js/bootstrap.min.js"></script>
@@ -24,45 +26,37 @@
       <![endif]-->
    </head>
    <body background="images/bg.jpg" ng-app="myApp" ng-controller="myCtrl">
-   		<div class="head container">
-   			<div class="row clearfix">
-				<div class="col-md-12 column">
-					<h2 class="text-center"><b>解忧杂货店</b></h2>
-					<blockquote class="pull-right">
-						<p>
-							<b>你的地图是一张白纸，所以即使想决定目的地，也不知道路在哪里。</b>
-						</p>
-						<i>——东野圭吾</i>
-					</blockquote>
+   		<div>
+   			<div class="head container">
+	   			<div class="row clearfix">
+					<div class="col-md-12 column">
+						<h2 class="text-center milky"><b>解忧杂货店</b></h2>
+						<blockquote class="pull-right" style="border-right: 0">
+							<p>
+								<b>你的地图是一张白纸，所以即使想决定目的地，也不知道路在哪里。</b>
+							</p>
+							<i>——东野圭吾</i>
+						</blockquote>
+					</div>
 				</div>
-			</div>
-			<ul id="myTab" class="nav nav-tabs">
-			    <li class="active"><a href="#home" data-toggle="tab">写信</a></li>
-			    <li><a href="#getReply" data-toggle="tab">取信</a></li>
-			    <li><a href="#advise" data-toggle="tab">建议</a></li>
-			</ul>
+				<ul id="myTab" class="nav nav-tabs" style="border-bottom: 0">
+				    <li class="active"><a href="#home" data-toggle="tab">写信</a></li>
+				    <li><a href="#getReply" data-toggle="tab">取信</a></li>
+				    <li><a href="#advise" data-toggle="tab">建议</a></li>
+				</ul>
+	   		</div>
+	   		<div class="body container">
+	   			<div class="col-md-8 column container" ng-view></div>
+		 		<div class="col-md-3 column pull-right">
+		 			<div style="margin-top: 40px">
+		 				
+		 			</div>
+			 		<div>
+						 <embed src="http://www.xiami.com/widget/197816429_2073511,1769319253,3621488,2074204,2073512,20526,1771139956,1769470092,_235_346_FF8719_494949_1/multiPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="opaque"></embed>
+			 		</div>
+				</div>
+	   		</div>
+	   		<div class="foot"></div>
    		</div>
-   		<div class="body container">
-   			<div class="col-md-8 column container" ng-view></div>
-	 		<div class="col-md-4 column pull-right">
-				<div class="panel panel-default">
-					<div class="panel-heading">
-						<h3 class="panel-title">
-							天空之城
-						</h3>
-					</div>
-					<div class="panel-body">
-						故事……
-					</div>
-					<div class="panel-footer">
-						久石让
-					</div>
-				</div>
-				<div class="media">
-					 <a href="#" class="pull-left"><img style="width: 350px" src="images/disk.jpg" class="media-object" alt='' /></a>
-				</div>
-			</div>
-   		</div>
-   		<div class="foot"></div>
    </body>
 </html>
