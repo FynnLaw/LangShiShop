@@ -1,7 +1,8 @@
 app.controller('getReplyCtrl', function($scope) {
 	$scope.getMessage = function(){
+		
 		$("#fat-btn").button('loading');
-		var getReplyKey = $scope.getReplyKey;
+		var getReplyKey = hex_md5($scope.getReplyKey);
 		
 		var data = {
 				getReplyKey : getReplyKey

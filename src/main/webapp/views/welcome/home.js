@@ -3,27 +3,41 @@ app.controller('homeCtrl', function($scope) {
 		
 		$scope.clearError();
 		
-		var getReplyKey = $scope.getReplyKey;
-		var content = $scope.submitContent;
-		
-		if(getReplyKey == "" || getReplyKey == undefined){
+		if($scope.getReplyKey == "" || $scope.getReplyKey == undefined){
 			$scope.showKeyError = true;
 			return;
 		}
 		
-		if(content == "" || content == undefined){
+		if($scope.submitContent == "" || $scope.submitContent == undefined){
 			$scope.showContentError = true;
+			$scope.errorMessage = "嗯？空白，你就是那张有无限可能的白纸吗？哈哈";
 			return;
 		}
+		
+		//md5加密
+		var getReplyKey = hex_md5($scope.getReplyKey);
+		
+		var key1 = getReplyKey.substring(0,8);
+		var key2 = getReplyKey.substring(8,16);
+		var key3 = getReplyKey.substring(16,32);
+		
+		//des加密
+		var content = strEnc($scope.submitContent,key1,key2,key3);
 		
 		var data = {
 				getReplyKey : getReplyKey,
 				content : content
 			};
+		
 		$.post("transport.do",data,function(result){
-			console.log(result);
-			console.log("success!");
-			$scope.submitContent = "success!";
+			if(result.code == "0"){
+				$scope.submitContent = "解忧杂货店已经收到你的来信，请明晚来取信!";
+			}else{
+				$scope.showContentError = true;
+				$scope.errorMessage = result.message;
+			}
+			$scope.$apply();
+			
 		},"json");
 	}
 	

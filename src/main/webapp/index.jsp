@@ -12,6 +12,13 @@
       <script src="js/bootstrap.min.js"></script>
       <script src="js/angular.min.js"></script>
       <script src="js/angular-route.min.js"></script>
+      <script type="text/javascript" src="js/des.js"></script>
+      <script type="text/javascript" src="js/md5.js"></script>
+      
+      <script type="text/javascript" src="js/jsbn.js"></script>
+      <script type="text/javascript" src="js/prng4.js"></script>
+      <script type="text/javascript" src="js/rng.js"></script>
+      <script type="text/javascript" src="js/rsa.js"></script>
       
       <script src="index.js"></script>
       <script src="views/welcome/home.js"></script>
@@ -48,9 +55,6 @@
 	   		<div class="body container">
 	   			<div class="col-md-8 column container" ng-view></div>
 		 		<div class="col-md-3 column pull-right">
-		 			<div style="margin-top: 40px">
-		 				
-		 			</div>
 			 		<div>
 						 <embed src="http://www.xiami.com/widget/197816429_2073511,1769319253,3621488,2074204,2073512,20526,1771139956,1769470092,_235_346_FF8719_494949_1/multiPlayer.swf" type="application/x-shockwave-flash" width="235" height="346" wmode="opaque"></embed>
 			 		</div>

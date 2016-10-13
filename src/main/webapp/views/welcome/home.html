@@ -10,8 +10,8 @@
                     <input ng-model="getReplyKey" type="text" class="form-control" style="width: 50%">
                     <span ng-show="showKeyError" class="red" style="height: 34px;display: block;float: right;line-height: 30px;">不能为空哦，不然你怎么取回我给你的回信呢？</span>
                 </div>
-			    <textarea ng-model="submitContent" rows="14" type="text" class="form-control" id="name" placeholder="在这里倾诉你的烦恼，解忧杂货店将为你解答……"></textarea>
-			  	<span ng-show="showContentError" class="red" style="height: 34px;display: block;float: right;line-height: 30px;">嗯？空白，你就是那张有无限可能的白纸吗？哈哈</span>
+			    <textarea ng-model="submitContent" rows="12" type="text" class="form-control" id="name" placeholder="在这里倾诉你的烦恼，解忧杂货店将为你解答……"></textarea>
+			  	<span ng-show="showContentError" class="red" style="height: 34px;display: block;float: right;line-height: 30px;">{{errorMessage}}</span>
 			  </div>
 			  <button ng-click="submit()" type="button" class="btn btn-success" >穿越</button>
 			  <button ng-click="clear()" type="button" class="btn btn-default">撕毁</button>

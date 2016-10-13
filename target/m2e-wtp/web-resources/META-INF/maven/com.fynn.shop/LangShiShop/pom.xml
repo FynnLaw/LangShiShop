@@ -63,6 +63,12 @@
        <artifactId>redis-counter</artifactId> 
        <version>1.0</version> 
     </dependency> 
+    
+    <dependency>
+	    <groupId>bouncycastle</groupId>
+	    <artifactId>bcprov-jdk14</artifactId>
+	    <version>139</version>
+	</dependency>
   </dependencies>
   <build>
     <finalName>LangShiShop</finalName>
