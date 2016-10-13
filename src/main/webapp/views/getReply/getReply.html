@@ -1,4 +1,4 @@
-<div ng-controller="homeCtrl">
+<div ng-controller="getReplyCtrl">
 	<div class="row clearfix">
 		<div>
 			<form role="form">
@@ -8,11 +8,10 @@
                         <button class="btn btn-default" type="button">请输入取信密码：</button>
                     </span>
                     <input ng-model="getReplyKey" type="text" class="form-control" style="width: 50%">
+                    <button id="fat-btn" class="btn btn-primary" data-loading-text="取信中..." type="button" ng-click="getMessage()">取信</button>
                 </div>
-			    <textarea ng-model="submitContent" rows="6" type="text" class="form-control" id="name" placeholder="在这里倾诉你的烦恼，解忧杂货店将为你解答……"></textarea>
+			    <textarea ng-model="result.reply" rows="6" type="text" class="form-control" id="replyContent" placeholder="回信內容将显示在这里……"></textarea>
 			  </div>
-			  <button ng-click="submit()" type="button" class="btn btn-success" >穿越</button>
-			  <button ng-click="clear()" type="button" class="btn btn-default">撕毁</button>
 			</form>
 	    </div>
 	</div>

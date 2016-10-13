@@ -5,9 +5,12 @@ app.controller('myCtrl', function($scope,$rootScope) {
 
 app.config(['$routeProvider',function($routeProvider) {
   $routeProvider.when('/', {
-      templateUrl: 'views/welcome/home.html',
-      controller: 'homeCtrl'
-    }).otherwise({
-      redirectTo: '/'
-    });
+      templateUrl: 'views/welcome/home.html'
+    }).when('/getReply', {
+	      templateUrl: 'views/getReply/getReply.html'
+	    }).when('/advise', {
+		      templateUrl: 'views/advise/advise.html'
+		    }).otherwise({
+	  redirectTo: '/'
+	});
 }])

@@ -1,17 +1,12 @@
-app.controller('homeCtrl', function($scope) {
+app.controller('adviseCtrl', function($scope) {
 	$scope.submit = function(){
-		console.log($scope.submitContent);
-		var getReplyKey = $scope.getReplyKey;
 		var content = $scope.submitContent;
-		
 		var data = {
-				getReplyKey : getReplyKey,
 				content : content
 			};
-		$.post("transport.do",data,function(result){
+		$.post("advise.do",data,function(result){
 			console.log(result);
 			console.log("success!");
-			$scope.submitContent = "success!";
 		},"json");
 	}
 	
