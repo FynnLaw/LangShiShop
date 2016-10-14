@@ -1,4 +1,4 @@
-app.registerCtrl('homeCtrl', function($scope,$location) {
+app.registerCtrl('successCtrl', function($scope) {
 	$scope.submit = function(){
 		
 		$scope.clearError();
@@ -31,8 +31,7 @@ app.registerCtrl('homeCtrl', function($scope,$location) {
 		
 		$.post("transport.do",data,function(result){
 			if(result.code == "0"){
-//				$scope.submitContent = "解忧杂货店已经收到你的来信，请明晚来取信!";
-				$location.path("/success");
+				$scope.submitContent = "解忧杂货店已经收到你的来信，请明晚来取信!";
 			}else{
 				$scope.showContentError = true;
 				$scope.errorMessage = result.message;

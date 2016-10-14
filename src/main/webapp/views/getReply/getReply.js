@@ -1,4 +1,4 @@
-app.controller('getReplyCtrl', function($scope) {
+app.registerCtrl('getReplyCtrl', function($scope) {
 	$scope.getMessage = function(){
 		
 		$("#fat-btn").button('loading');

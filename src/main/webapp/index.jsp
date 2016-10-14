@@ -4,26 +4,28 @@
 	<head>
       <!-- 为了让 Bootstrap 开发的网站对移动设备友好，确保适当的绘制和触屏缩放 -->
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link href="css/bootstrap.min.css" rel="stylesheet" />
+      
+      <!-- css库文件 -->
+      <link href="css/lib/bootstrap.min.css" rel="stylesheet" />
       <link href="css/normalize.css" rel="stylesheet" />
       <link href="css/style.css" rel="stylesheet" />
 
-      <script src="js/jquery-3.1.1.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/angular.min.js"></script>
-      <script src="js/angular-route.min.js"></script>
-      <script type="text/javascript" src="js/des.js"></script>
-      <script type="text/javascript" src="js/md5.js"></script>
-      
-      <script type="text/javascript" src="js/jsbn.js"></script>
-      <script type="text/javascript" src="js/prng4.js"></script>
-      <script type="text/javascript" src="js/rng.js"></script>
-      <script type="text/javascript" src="js/rsa.js"></script>
+	  <!-- js 库文件 -->
+      <script src="js/lib/jquery-3.1.1.min.js"></script>
+      <script src="js/lib/bootstrap.min.js"></script>
+      <script src="js/lib/angular.min.js"></script>
+      <script src="js/lib/angular-route.min.js"></script>
+      <script src="js/util/app.js"></script>
+     
+      <script type="text/javascript" src="js/encrypt/des.js"></script>
+      <script type="text/javascript" src="js/encrypt/md5.js"></script>
+      <!-- rsa 四个文件-->
+      <script type="text/javascript" src="js/encrypt/jsbn.js"></script>
+      <script type="text/javascript" src="js/encrypt/prng4.js"></script>
+      <script type="text/javascript" src="js/encrypt/rng.js"></script>
+      <script type="text/javascript" src="js/encrypt/rsa.js"></script>
       
       <script src="index.js"></script>
-      <script src="views/welcome/home.js"></script>
-      <script src="views/getReply/getReply.js"></script>
-      <script src="views/advise/advise.js"></script>
       
       <!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
       <!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->

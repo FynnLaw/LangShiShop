@@ -1,4 +1,4 @@
-app.controller('adviseCtrl', function($scope) {
+app.registerCtrl('adviseCtrl', function($scope) {
 	$scope.submit = function(){
 		var content = $scope.submitContent;
 		var data = {

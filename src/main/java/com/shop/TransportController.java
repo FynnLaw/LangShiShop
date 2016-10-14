@@ -55,14 +55,24 @@ public class TransportController {
 	@ResponseBody/** 该注解可以使这个方法直接向前端返回结果**/
 	@RequestMapping("/getReply")
 	public String getReply(@RequestParam("getReplyKey") String getReplyKey){
-		String reply = RedisTool.getInstance().getValue(getReplyKey);
-		
 		Map<String, String> result =  new HashMap<String, String>();
-		if(reply == null){
-			result.put("reply", "抱歉");
+		
+		boolean keyExsited = RedisTool.getInstance().exsitKey(getReplyKey);
+		if(!keyExsited){
+			result.put("code", Code.ERROR);
+			result.put("message", "noReplyKey");
 		}else{
-			result.put("reply", reply);
+			String reply = RedisTool.getInstance().getValue(getReplyKey);
+			
+			if(reply == null){
+				result.put("code", Code.ERROR);
+				result.put("reply", "noReply");
+			}else{
+				result.put("code", Code.SUCESS);
+				result.put("reply", reply);
+			}
 		}
+		
 		JSONObject json = JSONObject.fromObject(result);
 		System.out.println(json.toString());
 		return json.toString();
