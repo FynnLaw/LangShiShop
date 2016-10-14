@@ -24,6 +24,8 @@
       <script type="text/javascript" src="js/encrypt/prng4.js"></script>
       <script type="text/javascript" src="js/encrypt/rng.js"></script>
       <script type="text/javascript" src="js/encrypt/rsa.js"></script>
+      <script type="text/javascript" src="js/encrypt/jsencrypt.min.js"></script>
+      <script type="text/javascript" src="js/util/encrypt.js"></script>
       
       <script src="index.js"></script>
       

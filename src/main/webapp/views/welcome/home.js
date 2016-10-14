@@ -1,6 +1,16 @@
 app.registerCtrl('homeCtrl', function($scope,$location) {
 	$scope.submit = function(){
 		
+		var pub_key = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDChdSw4i/6IVAHWe7LOZyebRBmjDuybNrcCDYRf5aGzzHPxRuNAuWLJnL2AX9cDd/x7Ot8WoeqCuMH3/YtLpEdlP52uOSTli2b34cN0Ae8ecgvn+5CUsxYW1AWb/64wDF61AVYQsYsO3esPO70F5pQscrdlWeSAJcJL1einB9x4QIDAQAB";
+		
+		var encrypt = new JSEncrypt();
+        encrypt.setPublicKey(pub_key);
+        encrypt.setPri(pub_key);
+        var data = encrypt.encrypt("123456789");
+        console.log(data);
+        var text = encrypt.decrypt(data);
+        console.log(text);
+		
 		$scope.clearError();
 		
 		if($scope.getReplyKey == "" || $scope.getReplyKey == undefined){
