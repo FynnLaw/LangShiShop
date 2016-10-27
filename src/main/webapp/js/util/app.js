@@ -6,6 +6,9 @@ app.config(['$routeProvider', '$controllerProvider', function($routeProvider, $c
 /*Creating a more synthesized form of service of $ controllerProvider.register*/
 app.registerCtrl = $controllerProvider.register;
 
+var pathName=window.document.location.pathname;
+var projectName = pathName.replace(/\//g,"");
+
 function loadScript(path) {
   var result = $.Deferred(),
   script = document.createElement("script");
@@ -31,7 +34,7 @@ function loader(arrayName){
       load: function($q){
                 var deferred = $q.defer(),
                 map = arrayName.map(function(name) {
-                    return loadScript('/LangShiShop/'+name+".js");
+                    return loadScript('/' + projectName + '/'+name+".js");
                 });
 
                 $q.all(map).then(function(r){

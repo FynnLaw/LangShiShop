@@ -69,6 +69,13 @@
 	    <artifactId>bcprov-jdk14</artifactId>
 	    <version>139</version>
 	</dependency>
+	
+    <dependency>
+	    <groupId>com.fynn</groupId>
+	    <artifactId>Tools</artifactId>
+	    <version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	
   </dependencies>
   <build>
     <finalName>LangShiShop</finalName>
